@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Girasol Animado</title>
+    <style>
+        body {
+            background-color: #228cfd; /* Color de fondo rosa */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .pot {
+            width: 160px;
+            height: 80px;
+            background: #8B4513; /* Color de la maceta */
+            border-radius: 10px 10px 0 0;
+            position: relative;
+            margin-top: -10px; /* Alinear maceta al tallo */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .plant {
+            position: relative;
+            width: 40px;
+            height: 200px;
+            background: #228B22; /* Tallo de la planta */
+            margin: 0 auto;
+            border-radius: 20px;
+            transform-origin: center bottom;
+            animation: lean 3s infinite alternate;
+        }
+
+        .flower {
+            position: absolute;
+            top: -110px; /* Ajustar la posición de la flor */
+            left: -50%; /* Centrar la flor */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .petal {
+            position: absolute;
+            width: 60px;
+            height: 100px;
+            background: rgb(248, 240, 227); /* Color de los pétalos */
+            border-radius: 50px;
+            transform-origin: bottom center;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Pétalos */
+        .petal:nth-child(1) { transform: rotate(0deg); }
+        .petal:nth-child(2) { transform: rotate(51.43deg); }
+        .petal:nth-child(3) { transform: rotate(102.86deg); }
+        .petal:nth-child(4) { transform: rotate(154.29deg); }
+        .petal:nth-child(5) { transform: rotate(205.71deg); }
+        .petal:nth-child(6) { transform: rotate(257.14deg); }
+        .petal:nth-child(7) { transform: rotate(308.57deg); }
+
+        .face {
+            position: absolute;
+            font-size: 80px; /* Tamaño aumentado de la carita */
+            z-index: 2;
+            margin-top: 88px; /* Ajustar posición hacia abajo */
+        }
+
+        .leaf {
+            position: absolute;
+            width: 60px;
+            height: 30px;
+            background: #2E8B57; /* Color de las hojas */
+            border-radius: 30px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+            transform: rotate(20deg);
+            clip-path: ellipse(60% 40% at 50% 50%);
+        }
+
+        /* Posicionamiento de las hojas */
+        .leaf:nth-child(1) { top: 50px; left: 35px; transform: rotate(20deg); } /* Hoja derecha 1 */
+        .leaf:nth-child(2) { top: 130px; left: 30px; transform: rotate(10deg); } /* Hoja derecha 2 */
+        .leaf:nth-child(3) { top: 100px; left: -40px; transform: rotate(-15deg); } /* Hoja izquierda */
+
+        @keyframes lean {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(-5deg); }
+        }
+
+        .message {
+            margin-top: 20px;
+            font-size: 24px;
+            color: white; /* Color del texto */
+            text-align: center; /* Centrar el texto */
+        }
+
+        .heart {
+            color: red; /* Color del corazón */
+        }
+
+        .additional-text {
+            margin-top: 10px;
+            font-size: 20px;
+            color: white; /* Color del texto adicional */
+            text-align: center; /* Centrar el texto adicional */
+            max-width: 782px; /* Limitar el ancho del texto */
+            line-height: 1.5; /* Mejorar la legibilidad */
+        }
+    </style>
+</head>
+<body>
+    <div class="plant">
+        <div class="flower">
+            <div class="petal" style="left: 0;"></div>
+            <div class="petal" style="left: 0;"></div>
+            <div class="petal" style="left: 0;"></div>
+            <div class="petal" style="left: 0;"></div>
+            <div class="petal" style="left: 0;"></div>
+            <div class="petal" style="left: 0;"></div>
+            <div class="petal" style="left: 0;"></div>
+            <div class="face" style="margin-left: 55px;">😊</div> <!-- Carita centrada -->
+        </div>
+        <div class="leaf" style="top: 50px; left: 35px; transform: rotate(20deg);"></div> <!-- Hoja derecha 1 -->
+        <div class="leaf" style="top: 130px; left: 30px; transform: rotate(10deg);"></div> <!-- Hoja derecha 2 -->
+        <div class="leaf" style="top: 100px; left: -40px; transform: rotate(-15deg);"></div> <!-- Hoja izquierda -->
+    </div>
+    <div class="pot"></div>
+    <div class="message">ME ENCANTAS DEMASIADO <span class="heart">❤️</span> "YARE"</div>
+    <div class="additional-text">
+        Ya lo sabes me gustas mucho y quisiera estar contigo en estos momentos quiero abrazarte, besarte para serte sincero quiero salir contigo, y no dudo de verdad en que quiero algo contigo eres tan linda mujer, y te valoro la verdad vales mucho y se que no soy el mejor pero quiero estar contigo y me esforzare para que eso suceda... claro si tu quieres si no no hay problema TQM BB...❤️
+    </div> <!-- Texto adicional -->
+</body>
+</html>
