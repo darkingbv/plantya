@@ -13,7 +13,15 @@
             align-items: center;
             height: 100vh;
             margin: 0;
-            overflow-y: scroll; /* Habilita la barra de desplazamiento vertical */
+            overflow-y: auto; /* Habilita la barra de desplazamiento vertical */
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
         }
 
         .pot {
@@ -112,28 +120,50 @@
             max-width: 782px; /* Limitar el ancho del texto */
             line-height: 1.5; /* Mejorar la legibilidad */
         }
+
+        @media (max-width: 600px) {
+            .plant {
+                height: 150px; /* Reducir la altura del tallo en móviles */
+            }
+
+            .flower {
+                top: -80px; /* Ajustar la posición de la flor en móviles */
+            }
+
+            .face {
+                font-size: 60px; /* Reducir el tamaño de la carita en móviles */
+                margin-top: 65px; /* Ajustar posición hacia abajo en móviles */
+            }
+
+            .petal {
+                width: 45px; /* Reducir el tamaño de los pétalos en móviles */
+                height: 75px; /* Reducir el tamaño de los pétalos en móviles */
+            }
+        }
     </style>
 </head>
 <body>
-    <div class="plant">
-        <div class="flower">
-            <div class="petal" style="left: 0;"></div>
-            <div class="petal" style="left: 0;"></div>
-            <div class="petal" style="left: 0;"></div>
-            <div class="petal" style="left: 0;"></div>
-            <div class="petal" style="left: 0;"></div>
-            <div class="petal" style="left: 0;"></div>
-            <div class="petal" style="left: 0;"></div>
-            <div class="face" style="margin-left: 55px;">😊</div> <!-- Carita centrada -->
+    <div class="container">
+        <div class="plant">
+            <div class="flower">
+                <div class="petal" style="left: 0;"></div>
+                <div class="petal" style="left: 0;"></div>
+                <div class="petal" style="left: 0;"></div>
+                <div class="petal" style="left: 0;"></div>
+                <div class="petal" style="left: 0;"></div>
+                <div class="petal" style="left: 0;"></div>
+                <div class="petal" style="left: 0;"></div>
+                <div class="face" style="margin-left: 55px;">😊</div> <!-- Carita centrada -->
+            </div>
+            <div class="leaf" style="top: 50px; left: 35px; transform: rotate(20deg);"></div> <!-- Hoja derecha 1 -->
+            <div class="leaf" style="top: 130px; left: 30px; transform: rotate(10deg);"></div> <!-- Hoja derecha 2 -->
+            <div class="leaf" style="top: 100px; left: -40px; transform: rotate(-15deg);"></div> <!-- Hoja izquierda -->
         </div>
-        <div class="leaf" style="top: 50px; left: 35px; transform: rotate(20deg);"></div> <!-- Hoja derecha 1 -->
-        <div class="leaf" style="top: 130px; left: 30px; transform: rotate(10deg);"></div> <!-- Hoja derecha 2 -->
-        <div class="leaf" style="top: 100px; left: -40px; transform: rotate(-15deg);"></div> <!-- Hoja izquierda -->
+        <div class="pot"></div>
+        <div class="message">ME ENCANTAS DEMASIADO <span class="heart">❤️</span> "YARE"</div>
+        <div class="additional-text">
+            Ya lo sabes me gustas mucho y quisiera estar contigo en estos momentos quiero abrazarte, besarte para serte sincero quiero salir contigo, y no dudo de verdad en que quiero algo contigo eres tan linda mujer, y te valoro la verdad vales mucho y se que no soy el mejor pero quiero estar contigo y me esforzare para que eso suceda... claro si tu quieres si no no hay problema TQM BB...❤️
+        </div> <!-- Texto adicional -->
     </div>
-    <div class="pot"></div>
-    <div class="message">ME ENCANTAS DEMASIADO <span class="heart">❤️</span> "YARE"</div>
-    <div class="additional-text">
-        Ya lo sabes me gustas mucho y quisiera estar contigo en estos momentos quiero abrazarte, besarte para serte sincero quiero salir contigo, y no dudo de verdad en que quiero algo contigo eres tan linda mujer, y te valoro la verdad vales mucho y se que no soy el mejor pero quiero estar contigo y me esforzare para que eso suceda... claro si tu quieres si no no hay problema TQM BB...❤️
-    </div> <!-- Texto adicional -->
 </body>
 </html>
